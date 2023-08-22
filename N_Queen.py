@@ -75,12 +75,12 @@ class Solution:
         for i in range(self.n): # coloring and filling chess cells
             for j in range(self.n):
                 text = "♕" if board[i][j] == 1 else ""
-                cell = tk.Label(text=text, font="Areal 35 bold")
+                cell = tk.Label(text=text, font="Areal 35 bold", fg = "green")
                 cell.place(x=i*80, y=j*80,height=80, width=80 )
                 if ((i%8) % 2 == 0 and j%2 != 0) or ((i%8) % 2 != 0 and j%2 == 0) :
-                    cell.config(bg="dark green")
+                    cell.config(bg="black")
                 elif ((i%8) % 2 != 0 and j%2 != 0) or ((i%8) % 2 == 0 and j%2 == 0) :
-                    cell.config(bg="white")
+                    cell.config(bg='white')
         window.mainloop()
     
 if __name__ == "__main__":
